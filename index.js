@@ -10,7 +10,7 @@ var server = http.createServer(function(req, res) {
   // You can define here your custom logic to handle the request
   // and then proxy the request.
   proxy.web(req, res, {
-    target: 'http://echoapi.cloudapp.net/api',
+    target: 'http://172.16.1.4:8010/v2/check',
 secure: true,
 changeOrigin: true
   });
