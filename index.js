@@ -11,7 +11,7 @@ var server = http.createServer(function(req, res) {
   // and then proxy the request.
   proxy.web(req, res, {
     target: 'http://172.16.1.4:8010/v2/check',
-secure: true,
+secure: false,
 changeOrigin: true
   });
 });
