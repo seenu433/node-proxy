@@ -3,7 +3,7 @@ var http = require('http'),
  var proxy = httpProxy.createProxyServer({});// Creating Custom
  
 proxy.on('proxyReq', function(proxyReq, req, res, options) {
-  proxyReq.setHeader('X-Special-Proxy-Header', 'foobar');
+  proxyReq.setHeader('Content-Type', 'application/x-www-form-urlencoded');
 });
  
 var server = http.createServer(function(req, res) {
